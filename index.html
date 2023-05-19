@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href='style.css'>
+    <script src="https://kit.fontawesome.com/a19542d294.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -27,5 +28,111 @@
             </div>
         </div>
     </div>
+
+    <!-- --------about-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/raunak.jpeg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>asfjmnbvdcsxsmnhbgvfcdmjnhbgvfcdsx bvcdxsazvwjvbncwnckwn
+                        csjcjdcnjdnck
+                        nsdjbckjwncwnckwmcsmcsjwhvueh
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>iOS</span><br>Developing iOS mobile applications</li>
+                            <li><span>Web Development</span><br>Developing Web applications</li>
+                            <li><span>AWS Cloud Practioner</span><br>Cloud Services</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Sept 2020 - Dec 2022</span><br>iOS Developer at PwC</li>
+                            <li><span>Jan 2020 - May 2020</span><br>Intern at Shadowfax Technologies</li>
+                            <li><span>July 2018</span><br>Trainee at BSNL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016-2020</span><br>BE in Electronics and Communications from Ramaiah Institute of Technology, Bangalore</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------services--------->
+    <div id="services">
+        <div class="container">
+            <h1 class = "subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>iOS Development</h2>
+                    <p>sfjmnbvdcsxsmn
+                        hbgvfcdmjnhbgv
+                        fcdsx bvcdxsazvwj
+                        vbncwnckwn
+                        csjcjdcnjdnck
+                        nsdjbckjwncwnc
+                        kwmcsmcsjwhvueh
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>sfjmnbvdcsxsm
+                        nhbgvfcdmjnh
+                        bgvfcdsx bvcdxsazvw
+                        jvbncwnckwn
+                        csjcjdcnjdnck
+                        nsdjbckjwncwnckw
+                        mcsmcsjwhvueh
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Cloud Services</h2>
+                    <p>sfjmnbvdcs
+                        xsmnhbgvfcdmjn
+                        hbgvfcdsx bvcdxsazv
+                        wjvbncwnckwn
+                        csjcjdcnjdnck
+                        nsdjbckjwncwnck
+                        wmcsmcsjwhvueh
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
 </body>
 </html>
