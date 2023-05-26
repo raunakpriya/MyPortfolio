@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/Raunak..png" class="logo">
+                <img src="images/Raunak..png" class="logo" id="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -27,10 +27,16 @@
                 </div>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>iOS developer</p>
-                <h1>Hi, I'm <span>Raunak</span><br>from India</h1>
+            <div class="row-header">
+                <div class="header-text">
+                    <p>iOS developer</p>
+                    <h1>Hi, I'm <span>Raunak</span><br>from India</h1>
+                </div>
+                <div class="header-image">
+                    <img src="images/raunak_bg.png" class="bg_image">
+                </div>
             </div>
+            
         </div>
     </div>
 
@@ -225,9 +231,9 @@
         toggle.classList.toggle('active');
         document.body.classList.toggle("dark-theme");
         if(document.body.classList.contains("dark-theme")) {
-            logo.src = "images/Raunak..png";
+            logo.src = "images/Raunak.logo.png";
         } else {
-            logo.src = "images/Raunak.logo.png"
+            logo.src = "images/Raunak..png"
         }
     }
 
